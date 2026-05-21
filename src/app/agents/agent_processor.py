@@ -164,6 +164,7 @@ class AgentProcessor:
                 message = await loop.run_in_executor(
                     _executor,
                     lambda: openai_client.responses.create(
+                        conversation=thread_id,
                         input=input_list,
                         previous_response_id=message.id,
                         extra_body={"agent_reference": {"name": self.agent_id, "type": "agent_reference"}},
