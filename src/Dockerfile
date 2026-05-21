@@ -1,4 +1,4 @@
-FROM python:3.12-slim
+FROM o3r7afglpj35icosureg.azurecr.io/dockerhub/library/python:3.12-slim
 
 # Install uv and upgrade system packages to reduce vulnerabilities
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
